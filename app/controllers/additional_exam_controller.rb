@@ -113,7 +113,7 @@ class AdditionalExamController < ApplicationController
         end
       end
     else
-      @no_exam_notice = "Exam scheduling not done yet."
+      @no_exam_notice = "Agendamento de exames ainda não foram feitos."
     end
   end
 
