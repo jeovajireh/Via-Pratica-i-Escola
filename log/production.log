@@ -1,0 +1,560 @@
+# Logfile created on Sat Jun 25 19:55:44 -0300 2011
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:03) [GET]
+  Parameters: {"action"=>"login", "controller"=>"user"}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 36ms (View: 26, DB: 1) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:12) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 32ms (View: 9, DB: 12) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:28) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:43) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:49) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:56:55) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:57:17) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Rendering template within layouts/login
+Rendering user/login
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/]
+
+
+Processing UserController#login (for 189.22.166.110 at 2011-06-25 19:58:17) [POST]
+  Parameters: {"commit"=>"Entrar", "action"=>"login", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+Redirected to http://www.viapratica.com.br:3000/user/dashboard
+Completed in 22ms (DB: 3) | 302 Found [http://www.viapratica.com.br/]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 19:58:18) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 296ms (View: 207, DB: 62) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#profile (for 189.22.166.110 at 2011-06-25 19:58:38) [GET]
+  Parameters: {"action"=>"profile", "id"=>"admin", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/profile
+Completed in 72ms (View: 64, DB: 1) | 200 OK [http://www.viapratica.com.br/user/profile/admin]
+
+
+Processing UserController#edit (for 189.22.166.110 at 2011-06-25 19:58:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"admin", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/edit
+Completed in 32ms (View: 27, DB: 1) | 200 OK [http://www.viapratica.com.br/user/edit/admin]
+
+
+Processing UserController#edit (for 189.22.166.110 at 2011-06-25 19:59:09) [POST]
+  Parameters: {"commit"=>"► Update", "action"=>"edit", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"admin", "controller"=>"user", "user"=>{"role"=>"Admin", "last_name"=>"Administrator", "email"=>"admin@fedena.com", "first_name"=>"Via Prática"}}
+Redirected to http://www.viapratica.com.br:3000/user/profile/admin
+Completed in 24ms (DB: 13) | 302 Found [http://www.viapratica.com.br/user/edit/admin]
+
+
+Processing UserController#profile (for 189.22.166.110 at 2011-06-25 19:59:09) [GET]
+  Parameters: {"action"=>"profile", "id"=>"admin", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/profile
+Completed in 26ms (View: 18, DB: 1) | 200 OK [http://www.viapratica.com.br/user/profile/admin]
+
+
+Processing UserController#change_password (for 189.22.166.110 at 2011-06-25 19:59:19) [GET]
+  Parameters: {"action"=>"change_password", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/change_password
+Completed in 26ms (View: 23, DB: 0) | 200 OK [http://www.viapratica.com.br/user/change_password]
+
+
+Processing UserController#change_password (for 189.22.166.110 at 2011-06-25 19:59:32) [POST]
+  Parameters: {"commit"=>"► Update", "action"=>"change_password", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user", "user"=>{"confirm_password"=>"[FILTERED]", "new_password"=>"[FILTERED]", "old_password"=>"[FILTERED]"}}
+Redirected to http://www.viapratica.com.br:3000/user/dashboard
+Completed in 19ms (DB: 7) | 302 Found [http://www.viapratica.com.br/user/change_password]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 19:59:32) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing ExamController#index (for 189.22.166.110 at 2011-06-25 19:59:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"exam"}
+Rendering template within layouts/application
+Rendering exam/index
+Completed in 204ms (View: 57, DB: 12) | 200 OK [http://www.viapratica.com.br/exam]
+
+
+Processing GradingLevelsController#index (for 189.22.166.110 at 2011-06-25 20:00:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"grading_levels"}
+Rendering template within layouts/application
+Rendering grading_levels/index
+Completed in 195ms (View: 154, DB: 25) | 200 OK [http://www.viapratica.com.br/grading_levels]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:02:08) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 12ms (View: 5, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:04:08) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:04:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 51ms (View: 40, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:04:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 37ms (View: 32, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:05:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:05:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 36ms (View: 30, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:05:34) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:06:35) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 129ms (View: 122, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing ReminderController#index (for 189.22.166.110 at 2011-06-25 20:06:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"reminder"}
+Rendering template within layouts/application
+Rendering reminder/index
+Completed in 42ms (View: 25, DB: 3) | 200 OK [http://www.viapratica.com.br/reminder]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:08:46) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:10:46) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:11:32) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 35ms (View: 28, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:11:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 37ms (View: 31, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing ConfigurationController#settings (for 189.22.166.110 at 2011-06-25 20:11:52) [GET]
+  Parameters: {"action"=>"settings", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/settings
+Completed in 47ms (View: 31, DB: 3) | 200 OK [http://www.viapratica.com.br/configuration/settings]
+
+
+Processing ConfigurationController#settings (for 189.22.166.110 at 2011-06-25 20:12:16) [POST]
+  Parameters: {"commit"=>"► Update", "action"=>"settings", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"configuration", "configuration"=>{"currency_type"=>"R$", "student_attendance_type"=>"Daily", "admission_number_auto_increment"=>"1", "institution_phone_no"=>"", "employee_number_auto_increment"=>"1", "institution_address"=>"", "institution_name"=>""}}
+Redirected to http://www.viapratica.com.br:3000/configuration/settings
+Completed in 34ms (DB: 8) | 302 Found [http://www.viapratica.com.br/configuration/settings]
+
+
+Processing ConfigurationController#settings (for 189.22.166.110 at 2011-06-25 20:12:17) [GET]
+  Parameters: {"action"=>"settings", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/settings
+Completed in 40ms (View: 26, DB: 2) | 200 OK [http://www.viapratica.com.br/configuration/settings]
+
+
+Processing UserController#profile (for 189.22.166.110 at 2011-06-25 20:12:26) [GET]
+  Parameters: {"action"=>"profile", "id"=>"admin", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/profile
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://www.viapratica.com.br/user/profile/admin]
+
+
+Processing EmployeeController#profile (for 189.22.166.110 at 2011-06-25 20:12:31) [GET]
+  Parameters: {"action"=>"profile", "id"=>"1", "controller"=>"employee"}
+Rendering template within layouts/application
+Rendering employee/profile
+Completed in 283ms (View: 100, DB: 60) | 200 OK [http://www.viapratica.com.br/employee/profile/1]
+
+
+Processing EmployeeController#profile_general (for 189.22.166.110 at 2011-06-25 20:13:10) [POST]
+  Parameters: {"action"=>"profile_general", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://www.viapratica.com.br/employee/profile_general/1]
+
+
+Processing EmployeeController#profile_personal (for 189.22.166.110 at 2011-06-25 20:13:16) [POST]
+  Parameters: {"action"=>"profile_personal", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 47ms (View: 14, DB: 25) | 200 OK [http://www.viapratica.com.br/employee/profile_personal/1]
+
+
+Processing EmployeeController#profile_additional_details (for 189.22.166.110 at 2011-06-25 20:13:20) [POST]
+  Parameters: {"action"=>"profile_additional_details", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 39ms (View: 6, DB: 24) | 200 OK [http://www.viapratica.com.br/employee/profile_additional_details/1]
+
+
+Processing EmployeeController#profile_general (for 189.22.166.110 at 2011-06-25 20:13:25) [POST]
+  Parameters: {"action"=>"profile_general", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 23ms (View: 15, DB: 1) | 200 OK [http://www.viapratica.com.br/employee/profile_general/1]
+
+
+Processing EmployeeController#profile_address (for 189.22.166.110 at 2011-06-25 20:13:28) [POST]
+  Parameters: {"action"=>"profile_address", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://www.viapratica.com.br/employee/profile_address/1]
+
+
+Processing EmployeeController#profile_contact (for 189.22.166.110 at 2011-06-25 20:13:29) [POST]
+  Parameters: {"action"=>"profile_contact", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://www.viapratica.com.br/employee/profile_contact/1]
+
+
+Processing EmployeeController#profile_bank_details (for 189.22.166.110 at 2011-06-25 20:13:31) [POST]
+  Parameters: {"action"=>"profile_bank_details", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "id"=>"1", "controller"=>"employee"}
+Completed in 36ms (View: 6, DB: 21) | 200 OK [http://www.viapratica.com.br/employee/profile_bank_details/1]
+
+
+Processing ConfigurationController#index (for 189.22.166.110 at 2011-06-25 20:13:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"configuration"}
+Rendering template within layouts/application
+Rendering configuration/index
+Completed in 38ms (View: 32, DB: 1) | 200 OK [http://www.viapratica.com.br/configuration]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:13:52) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:15:58) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:17:57) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:19:57) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:21:57) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:22:14) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 33ms (View: 26, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:23:25) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:23:56) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#index (for 189.22.166.110 at 2011-06-25 20:24:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/index
+Completed in 29ms (View: 25, DB: 0) | 200 OK [http://www.viapratica.com.br/user]
+
+
+Processing UserController#all (for 189.22.166.110 at 2011-06-25 20:24:13) [GET]
+  Parameters: {"action"=>"all", "controller"=>"user"}
+Rendering template within layouts/application
+Rendering user/all
+Completed in 27ms (View: 23, DB: 1) | 200 OK [http://www.viapratica.com.br/user/all]
+
+
+Processing UserController#list_user (for 189.22.166.110 at 2011-06-25 20:24:19) [POST]
+  Parameters: {"action"=>"list_user", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "user_type"=>"Student", "controller"=>"user"}
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://www.viapratica.com.br/user/list_user]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:25:21) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 34ms (View: 27, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:27:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:29:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:31:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:33:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:35:22) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:37:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:39:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:41:23) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:43:22) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing StudentController#index (for 189.22.166.110 at 2011-06-25 20:44:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/index
+Completed in 38ms (View: 25, DB: 0) | 200 OK [http://www.viapratica.com.br/student]
+
+
+Processing StudentController#index (for 189.22.166.110 at 2011-06-25 20:45:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://www.viapratica.com.br/student]
+
+
+Processing StudentController#advanced_search (for 189.22.166.110 at 2011-06-25 20:45:50) [GET]
+  Parameters: {"action"=>"advanced_search", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/advanced_search
+Completed in 151ms (View: 105, DB: 39) | 200 OK [http://www.viapratica.com.br/student/advanced_search]
+
+
+Processing StudentController#view_all (for 189.22.166.110 at 2011-06-25 20:45:56) [GET]
+  Parameters: {"action"=>"view_all", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/view_all
+Completed in 32ms (View: 25, DB: 1) | 200 OK [http://www.viapratica.com.br/student/view_all]
+
+
+Processing StudentController#index (for 189.22.166.110 at 2011-06-25 20:46:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://www.viapratica.com.br/student]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:48:12) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing StudentController#advanced_search (for 189.22.166.110 at 2011-06-25 20:48:47) [GET]
+  Parameters: {"action"=>"advanced_search", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/advanced_search
+Completed in 79ms (View: 72, DB: 1) | 200 OK [http://www.viapratica.com.br/student/advanced_search]
+
+
+Processing StudentController#advanced_search (for 189.22.166.110 at 2011-06-25 20:49:11) [GET]
+  Parameters: {"action"=>"advanced_search", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/advanced_search
+Completed in 179ms (View: 170, DB: 2) | 200 OK [http://www.viapratica.com.br/student/advanced_search]
+
+
+Processing StudentController#advanced_search (for 189.22.166.110 at 2011-06-25 20:50:59) [GET]
+  Parameters: {"action"=>"advanced_search", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/advanced_search
+Completed in 87ms (View: 80, DB: 1) | 200 OK [http://www.viapratica.com.br/student/advanced_search]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:55:01) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 96ms (View: 17, DB: 15) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing StudentController#advanced_search (for 189.22.166.110 at 2011-06-25 20:55:13) [GET]
+  Parameters: {"action"=>"advanced_search", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/advanced_search
+Completed in 248ms (View: 124, DB: 3) | 200 OK [http://www.viapratica.com.br/student/advanced_search]
+
+
+Processing StudentController#index (for 189.22.166.110 at 2011-06-25 20:55:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"student"}
+Rendering template within layouts/application
+Rendering student/index
+Completed in 33ms (View: 27, DB: 1) | 200 OK [http://www.viapratica.com.br/student]
+
+
+Processing UserController#dashboard (for 189.22.166.110 at 2011-06-25 20:55:38) [GET]
+  Parameters: {"action"=>"dashboard", "controller"=>"user"}
+Rendering template within layouts/dashboard
+Rendering user/dashboard
+Completed in 61ms (View: 54, DB: 1) | 200 OK [http://www.viapratica.com.br/user/dashboard]
+
+
+Processing FinanceController#index (for 189.22.166.110 at 2011-06-25 20:55:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"finance"}
+Rendering template within layouts/application
+Rendering finance/index
+Completed in 47ms (View: 31, DB: 1) | 200 OK [http://www.viapratica.com.br/finance]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:57:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 20:59:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:01:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:03:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:05:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:07:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:09:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:11:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:13:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:15:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:17:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:19:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
+
+
+Processing UserController#header_link (for 189.22.166.110 at 2011-06-25 21:21:56) [POST]
+  Parameters: {"action"=>"header_link", "authenticity_token"=>"wjMd6w8ihsutMqUNQ2IJFbAgpYA4CuG1iMhL7+BQlLY=", "controller"=>"user"}
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://www.viapratica.com.br/user/header_link]
