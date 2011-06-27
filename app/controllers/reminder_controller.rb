@@ -25,7 +25,7 @@ class ReminderController < ApplicationController
         flash[:notice] = "Mensagem enviada com sucesso"
         redirect_to :controller=>"reminder", :action=>"create_reminder"
       else
-        flash[:notice]="<b>ERROR:</b>Por favor, preencha os campos necessários para criar esta mensagem"
+        flash[:notice]="<b>ERRO:</b>Por favor, preencha os campos necessários para criar esta mensagem"
         redirect_to :controller=>"reminder", :action=>"create_reminder"
       end
     end
@@ -130,7 +130,7 @@ class ReminderController < ApplicationController
         flash[:notice]="Sua resposta foi enviada"
         redirect_to :controller=>"reminder", :action=>"view_reminder", :id2=>params[:id2]
       else
-        flash[:notice]="<b>ERROR:</b>Por favor, escreva assunto e texto"
+        flash[:notice]="<b>ERRO:</b>Por favor, escreva assunto e texto"
         redirect_to :controller=>"reminder", :action=>"view_reminder",:id2=>params[:id2]
       end
     end
