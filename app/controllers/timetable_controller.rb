@@ -13,7 +13,7 @@ class TimetableController < ApplicationController
       holiday = []
       @holiday = Weekday.find_all_by_batch_id(@batch.id)
       @holiday = Weekday.default if @holiday.empty?
-      flash[:notice] = 'You have set the weekdays!' if @holiday.empty?
+      flash[:notice] = 'Você definiu os dias da semana!' if @holiday.empty?
       @holiday.each do |h|
         holiday.push h.weekday
       end
@@ -24,7 +24,7 @@ class TimetableController < ApplicationController
         if @period.empty?
           unless Event.is_a_holiday?(d)
             if holiday.include? w
-              unless @config.config_value == 'Daily'
+              unless @config.config_value == 'Dia'
                 @timetable = TimetableEntry.find_all_by_batch_id_and_week_day_id(@batch.id, d.wday)
                 @timetable.each do |t|
                   PeriodEntry.create(:month_date=> d, :batch_id => @batch.id, :subject_id => t.subject_id, :class_timing_id => t.class_timing_id, :employee_id => t.employee_id)
@@ -58,11 +58,11 @@ class TimetableController < ApplicationController
         end
           
         if set == 0
-          flash[:notice] = 'Timetable has already been published'
+          flash[:notice] = 'Calendário já foi publicado'
         elsif set == 1
-          flash[:notice] = 'Timetable updated'
+          flash[:notice] = 'Calendário atualizado'
         else
-          flash[:notice] = 'Timetable created successfully'
+          flash[:notice] = 'Calendário criado com sucesso'
         end
       end
     
@@ -125,7 +125,7 @@ class TimetableController < ApplicationController
   end
 
   def delete_subject
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     tte = TimetableEntry.update(params[:id], :subject_id => nil)
     @timetable = TimetableEntry.find_all_by_batch_id(tte.batch_id)
@@ -133,7 +133,7 @@ class TimetableController < ApplicationController
   end
 
   def edit
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     @batch = Batch.find(params[:id])
     @timetable = TimetableEntry.find_all_by_batch_id(params[:id])
@@ -170,7 +170,7 @@ class TimetableController < ApplicationController
 
         redirect_to :action => "edit", :id => @batch.id
       else
-        flash[:notice]="Select a batch to continue"
+        flash[:notice]="Selecionar um lote? para continuar"
         redirect_to :action => "select_class"
       end
     end
@@ -181,7 +181,7 @@ class TimetableController < ApplicationController
   end
 
   def tt_entry_update
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     subject = Subject.find(params[:sub_id])
     TimetableEntry.update(params[:tte_id], :subject_id => params[:sub_id])
@@ -194,7 +194,7 @@ class TimetableController < ApplicationController
   end
 
   def update_multiple_timetable_entries
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     subject = Subject.find(params[:subject_id])
     tte_ids = params[:tte_ids].split(",").each {|x| x.to_i}
     course = subject.batch
@@ -224,7 +224,7 @@ class TimetableController < ApplicationController
   end
 
   def student_view
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     student = Student.find(params[:id])
     @batch = student.batch
     @timetable = TimetableEntry.find_all_by_batch_id(@batch.id)
@@ -258,7 +258,7 @@ class TimetableController < ApplicationController
     end
 
     @subjects = Subject.find_all_by_batch_id(@batch.id)
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     render :update do |page|
       page.replace_html "timetable_view", :partial => "view_timetable"
     end
@@ -267,7 +267,7 @@ class TimetableController < ApplicationController
   #methods given below are for timetable with HR module connected
 
   def select_class2
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @batches = Batch.active
     if request.post?
       unless params[:timetable_entry][:batch_id].empty?
@@ -288,14 +288,14 @@ class TimetableController < ApplicationController
         end
         redirect_to :action => "edit2", :id => @batch.id
       else
-        flash[:notice]="Select a batch to continue"
+        flash[:notice]="Selecionar um lote? para continuar"
         redirect_to :action => "select_class2"
       end
     end
   end
 
   def edit2
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     @batch = Batch.find(params[:id])
     @timetable = TimetableEntry.find_all_by_batch_id(params[:id])
@@ -311,7 +311,7 @@ class TimetableController < ApplicationController
   end
 
   def update_employees
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     if params[:subject_id] == ""
       render :text => ""
       return
@@ -321,7 +321,7 @@ class TimetableController < ApplicationController
   end
 
   def update_multiple_timetable_entries2
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     employees_subject = EmployeesSubject.find(params[:emp_sub_id])
     tte_ids = params[:tte_ids].split(",").each {|x| x.to_i}
     @batch = employees_subject.subject.batch
@@ -335,22 +335,22 @@ class TimetableController < ApplicationController
         "messages" => [] }
 
       # check for weekly subject limit.
-      errors["messages"] << "Weekly subject limit reached." \
+      errors["messages"] << "Limite de assunto semanal atingido." \
         if subject.max_weekly_classes <= TimetableEntry.count(:conditions => "subject_id = #{subject.id}")
 
       #check for overlapping classes
-      errors["messages"] << "Class overlap occured." \
+      errors["messages"] << "Ocorreu sobreposição de classe" \
         unless TimetableEntry.find(:first,
         :conditions => "week_day_id = #{tte.week_day_id} AND
                                                class_timing_id = #{tte.class_timing_id} AND
                                                employee_id = #{employee.id}").nil?
 
       # check for max_hour_day exceeded
-      errors["messages"] << "Max hours per day exceeded." \
+      errors["messages"] << "Horas máximas por dia excedidas." \
         if employee.max_hours_per_day <= TimetableEntry.count(:conditions => "employee_id = #{employee.id} AND week_day_id = #{tte.week_day_id}")
 
       # check for max hours per week
-      errors["messages"] << "Max hours per week exceeded." \
+      errors["messages"] << "Horas máximas por semana excedidas." \
         if employee.max_hours_per_week <= TimetableEntry.count(:conditions => "employee_id = #{employee.id}")
 
       if errors["messages"].empty?
@@ -365,7 +365,7 @@ class TimetableController < ApplicationController
   end
 
   def delete_employee2
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     tte=TimetableEntry.update(params[:id], :subject_id => nil, :employee_id => nil)
     @timetable = TimetableEntry.find_all_by_batch_id(tte.batch_id)
@@ -373,7 +373,7 @@ class TimetableController < ApplicationController
   end
 
   def tt_entry_update2
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     @errors = {"messages" => []}
     subject = Subject.find(params[:sub_id])
     tte = TimetableEntry.find(params[:tte_id])
@@ -404,7 +404,7 @@ class TimetableController < ApplicationController
       @day = Weekday.default
     end
     @subjects = Subject.find_all_by_batch_id(@batch.id)
-    @weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    @weekday = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"]
     respond_to do |format|
       format.pdf { render :layout => false }
     end
