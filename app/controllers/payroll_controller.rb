@@ -7,7 +7,7 @@ class PayrollController < ApplicationController
     @deductionable_categories = PayrollCategory.find_all_by_is_deduction(true, :order=> "name ASC")
     @category = PayrollCategory.new(params[:category])
     if request.post? and @category.save
-      flash[:notice]="payroll category saved"
+      flash[:notice]="Categoria de folha de pagamento salva"
       redirect_to :action => "add_category"
     end
     
@@ -17,7 +17,7 @@ class PayrollController < ApplicationController
     @categories = PayrollCategory.find(:all, :order=> "name ASC")
     @category = PayrollCategory.find(params[:id])
     if request.post? and @category.update_attributes(params[:category])
-      flash[:notice] = "Payroll category updated"
+      flash[:notice] = "Categoria de folha de pagamento atualizada"
       redirect_to :action => "add_category"
     end
   end
@@ -41,10 +41,10 @@ class PayrollController < ApplicationController
     if employees.empty?
     PayrollCategory.find(params[:id]).destroy
     @departments = PayrollCategory.find :all
-    flash[:notice]="Successfully deleted!"
+    flash[:notice]="Excluído com sucesso!"
     redirect_to :action => "add_category"
     else
-      flash[:notice]="Unable to delete!"
+      flash[:notice]="Não é possível excluir!"
       redirect_to :action => "add_category"
     end
   end
@@ -59,7 +59,7 @@ class PayrollController < ApplicationController
       params[:manage_payroll].each_pair do |k, v|
         EmployeeSalaryStructure.create(:employee_id => params[:id], :payroll_category_id => k, :amount => v['amount'])
       end
-      flash[:notice] = "Data saved for #{@employee.first_name}"
+      flash[:notice] = "Dados de #{@employee.first_name} salvos"
       redirect_to :controller => "employee", :action => "profile", :id=> @employee.id
     end
     else
