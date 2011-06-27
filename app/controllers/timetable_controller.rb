@@ -37,7 +37,7 @@ class TimetableController < ApplicationController
             end
           end
         else
-          unless @config.config_value == 'Daily'
+          unless @config.config_value == 'Diariamente'
             if d >= Date.today
               @timetable = TimetableEntry.find_all_by_batch_id_and_week_day_id(@batch.id, d.wday)
               @period.each do |p|
@@ -190,7 +190,7 @@ class TimetableController < ApplicationController
   end
 
   def tt_entry_noupdate
-    render :update => "error_div_#{params[:tte_id]}", :text => "Cancelled."
+    render :update => "error_div_#{params[:tte_id]}", :text => "Cancelado."
   end
 
   def update_multiple_timetable_entries
@@ -389,7 +389,7 @@ class TimetableController < ApplicationController
   end
 
   def tt_entry_noupdate2
-    render :update => "error_div_#{params[:tte_id]}", :text => "Cancelled."
+    render :update => "error_div_#{params[:tte_id]}", :text => "Cancelado."
   end
   #PDF Reports
   def timetable_pdf
