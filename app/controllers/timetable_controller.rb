@@ -58,7 +58,7 @@ class TimetableController < ApplicationController
         end
           
         if set == 0
-          flash[:notice] = 'Calendário já foi publicado'
+          flash[:notice] = 'Calendário já publicado'
         elsif set == 1
           flash[:notice] = 'Calendário atualizado'
         else
