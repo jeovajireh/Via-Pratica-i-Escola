@@ -205,7 +205,7 @@ class TimetableController < ApplicationController
         "messages" => [] }
 
       # check for weekly subject limit.
-      errors["messages"] << "Weekly subject limit reached." \
+      errors["messages"] << "Limite de assunto semanal atingido." \
         if subject.max_weekly_classes <= TimetableEntry.count(:conditions => "subject_id = #{subject.id}")
 
       if errors["messages"].empty?
