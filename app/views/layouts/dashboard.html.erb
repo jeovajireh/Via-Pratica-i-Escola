@@ -25,7 +25,7 @@
        ***********************************************/
       var anylinkmenu1={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
        anylinkmenu1.items = [
-        ["Calendar", "/calendar"],
+        ["Calendário", "/calendar"],
         ["Examination", "/exam"],
         ["News", "/news"],
         ["Event Creation", "/event"],
@@ -54,7 +54,7 @@
             if this_user.admin? %> <!--
           <%= link_to "News", :controller => "news", :action => "index" \
             if this_user.admin? %> -->
-          <%= link_to "Timetable", :controller => "timetable", :action => "index" \
+          <%= link_to "Horário", :controller => "timetable", :action => "index" \
             if this_user.admin? %>
           <% if this_user.admin? %>
             <a href="#" class="menuanchorclass" rel="anylinkmenu1">More ▼</a>
