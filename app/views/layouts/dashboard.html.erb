@@ -26,7 +26,7 @@
       var anylinkmenu1={divclass:'anylinkmenu', inlinestyle:'', linktarget:''} //First menu variable. Make sure "anylinkmenu1" is a unique name!
        anylinkmenu1.items = [
         ["Calendário", "/calendar"],
-        ["Prova", "/exam"],
+        ["Provas", "/exam"],
         ["Notícias", "/news"],
         ["Criação de eventos", "/event"],
         ["Recursos Humanos", "/employee/hr"],
@@ -41,7 +41,7 @@
     <div id="header_bg">
       <div id="header">
         <div id="main-menu">
-          <%= link_to "Painel de Instrumentos", :controller => "user", :action => "dashboard" %>
+          <%= link_to "Painel", :controller => "user", :action => "dashboard" %>
           <% this_user = User.find(session[:user_id]) if session[:user_id] %>
           <%  if this_user.student? || this_user.employee? %>
           <%= link_to "Calendário", :controller => "calendar" %>
