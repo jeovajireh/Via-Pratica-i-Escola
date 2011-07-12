@@ -10,7 +10,7 @@ class NewsController < ApplicationController
       if sms_setting.application_sms_active
         students = Student.find(:all,:select=>'phone2',:conditions=>'is_sms_enabled = true')
       end
-      flash[:notice] = 'News added!'
+      flash[:notice] = 'Notícia adicionada!'
       redirect_to :controller => 'news', :action => 'view', :id => @news.id
     end
   end
@@ -39,7 +39,7 @@ class NewsController < ApplicationController
   def edit
     @news = News.find(params[:id])
     if request.post? and @news.update_attributes(params[:news])
-      flash[:notice] = 'News updated!'
+      flash[:notice] = 'Notícia atualizada!'
       redirect_to :controller => 'news', :action => 'view', :id => @news.id
     end
   end
