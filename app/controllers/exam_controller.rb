@@ -101,11 +101,11 @@ class ExamController < ApplicationController
           student_user = s.user
           Reminder.create(:sender=> current_user.id,:recipient=>student_user.id,
             :subject=>"Result Published",
-            :body=>"#{@exam_group.name} result has been published  <br/> Please view reports for your result")
+            :body=>"#{@exam_group.name} resultado publicado  <br/> Por favor, veja os relatórios para o seu resultado")
         end
       end
     else
-      @no_exam_notice = "Exam scheduling not done yet."
+      @no_exam_notice = "Agendamento de exame não foi feito ainda."
     end
   end
 
