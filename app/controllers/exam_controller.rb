@@ -37,7 +37,7 @@ class ExamController < ApplicationController
   
     else
       render(:update) do |page|
-        page.replace_html 'flash', :text=>'<div class="errorExplanation"><p>Exam name can\'t be blank</p></div>'
+        page.replace_html 'flash', :text=>'<div class="errorExplanation"><p>Nome do exame não pode estar em branco</p></div>'
       end
     end
   end
@@ -54,8 +54,8 @@ class ExamController < ApplicationController
         students.each do |s|
           student_user = s.user
           Reminder.create(:sender=> current_user.id,:recipient=>student_user.id,
-            :subject=>"Exam Scheduled",
-            :body=>"#{@exam_group.name} has been scheduled  <br/> Please view calendar for more details")
+            :subject=>"Exame Agendado",
+            :body=>"#{@exam_group.name} foi agendado  <br/> Por favor, veja o calendário para mais detalhes")
         end
       
     end
@@ -77,8 +77,8 @@ class ExamController < ApplicationController
               recipients.push guardian.mobile_phone unless guardian.mobile_phone.nil?
               end
             end
-            @message = "#{@exam_group.name} exam Timetable has been published." if params[:status] == "schedule"
-            @message = "#{@exam_group.name} exam result has been published." if params[:status] == "result"
+            @message = "#{@exam_group.name} horário do exame foi publicado." if params[:status] == "schedule"
+            @message = "#{@exam_group.name} resultado do exame foi publicado." if params[:status] == "result"
             unless recipients.empty?
               sms = SmsManager.new(@message,recipients)
               sms.send_sms
@@ -88,11 +88,11 @@ class ExamController < ApplicationController
       else
         @conf = Configuration.available_modules
         if @conf.include?('SMS')
-          @sms_setting_notice = "Exam schedule published, No sms was sent as Sms setting was not activated" if params[:status] == "schedule"
-          @sms_setting_notice = "Exam result published, No sms was sent as Sms setting was not activated" if params[:status] == "result"
+          @sms_setting_notice = "Agenda de exame publicada, SMS não foi enviada, configuração SMS não foi ativada" if params[:status] == "schedule"
+          @sms_setting_notice = "Resultado do exame publicado, SMS não foi enviada, configuração SMS não foi ativada" if params[:status] == "result"
         else
-          @sms_setting_notice = "Exam schedule published" if params[:status] == "schedule"
-          @sms_setting_notice = "Exam result published" if params[:status] == "result"
+          @sms_setting_notice = "Agenda do exame publicada" if params[:status] == "schedule"
+          @sms_setting_notice = "Resultado do exame foi publicado." if params[:status] == "result"
         end
       end
       if params[:status] == "result"
