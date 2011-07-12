@@ -10,7 +10,7 @@ class ExamsController < ApplicationController
     @exam = Exam.new(params[:exam])
     @exam.exam_group_id = @exam_group.id
     if @exam.save
-      flash[:notice] = "New exam created successfully."
+      flash[:notice] = "Novo exame criado com sucesso."
       redirect_to [@batch, @exam_group]
     else
       @subjects = @batch.subjects
@@ -27,7 +27,7 @@ class ExamsController < ApplicationController
     @exam = Exam.find params[:id], :include => :exam_group
 
     if @exam.update_attributes(params[:exam])
-      flash[:notice] = 'Updated exam details successfully.'
+      flash[:notice] = 'Detalhes do exame atualizados com sucesso.'
       redirect_to [@exam_group, @exam]
     else
       render 'edit'
@@ -80,7 +80,7 @@ class ExamsController < ApplicationController
         @exam_score.update_attributes(details)
       end
     end
-    flash[:notice] = 'Exam scores updated.'
+    flash[:notice] = 'Notas dos exames atualizados.'
     redirect_to [@exam_group, @exam]
   end
 
