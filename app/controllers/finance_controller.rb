@@ -15,7 +15,7 @@ class FinanceController < ApplicationController
   def donation
     @donation = FinanceDonation.new(params[:donation])
     if request.post? and @donation.save
-      flash[:notice] = 'Donation accepted.'
+      flash[:notice] = 'Doação aceita.'
       redirect_to :action => 'donation_receipt', :id => @donation.id
     end
   end
@@ -41,10 +41,10 @@ class FinanceController < ApplicationController
     @expense = FinanceTransaction.new(params[:transaction])
     @categories = FinanceTransactionCategory.expense_categories
     if @categories.empty?
-      flash[:notice] = "Please create category for expense!"
+      flash[:notice] = "Por favor crie categoria para despesa!"
     end
     if request.post? and @expense.save
-      flash[:notice] = "Expense has been added to the accounts."
+      flash[:notice] = "Despesa foi adicionada às contas."
     end
   end
 
@@ -52,7 +52,7 @@ class FinanceController < ApplicationController
     @transaction = FinanceTransaction.find(params[:id])
     @categories = FinanceTransactionCategory.all(:conditions => {:is_income => false} )
     if request.post? and @transaction.update_attributes(params[:transaction])
-      flash[:notice] = "The entry has been edited."
+      flash[:notice] = "A entrada foi editada."
     end
   end
   def income_create
@@ -60,10 +60,10 @@ class FinanceController < ApplicationController
     @income = FinanceTransaction.new(params[:transaction])
     @categories = FinanceTransactionCategory.income_categories
     if @categories.empty?
-      flash[:notice] = "Please create category for income!"
+      flash[:notice] = "Por favor crie categoria para renda!"
     end
     if request.post? and @income.save
-      flash[:notice] = "Income has been added to the accounts."
+      flash[:notice] = "Renda foi adicionada às contas."
     end
   end
 
@@ -75,7 +75,7 @@ class FinanceController < ApplicationController
     @transaction = FinanceTransaction.find(params[:id])
     @categories = FinanceTransactionCategory.all(:conditions => {:is_income => true} )
     if request.post? and @transaction.update_attributes(params[:transaction])
-      flash[:notice] = "The entry has been edited."
+      flash[:notice] = "A entrada foi editada."
     end
   end
 
@@ -278,7 +278,7 @@ class FinanceController < ApplicationController
     dates.each do |d|
       d.approve(current_user.id)
     end
-    flash[:notice] = 'Payslip has been approved'
+    flash[:notice] = 'Payslip foi aprovado'
     redirect_to :action => "index"
     
   end
@@ -289,7 +289,7 @@ class FinanceController < ApplicationController
     dates.each do |d|
       d.approve(current_user.id)
     end
-    flash[:notice] = 'Payslip has been approved'
+    flash[:notice] = 'Payslip foi aprovado'
     redirect_to :action => "index"
   end
 
@@ -609,12 +609,12 @@ class FinanceController < ApplicationController
               :body => body, :is_read=>false, :is_deleted_by_sender=>false,:is_deleted_by_recipient=>false)
            end
         end
-        Event.create(:title=> "Fees Due", :description =>@additional_category.name, :start_date => @due_date, :end_date => @due_date, :is_due => true)
+        Event.create(:title=> "Taxas Devidas", :description =>@additional_category.name, :start_date => @due_date, :end_date => @due_date, :is_due => true)
       end
-      flash[:notice] = "Category created, please add Particulars for the category"
+      flash[:notice] = "Categoria criada, por favor, adicione Elementos para a categoria"
       redirect_to(:action => "add_particulars" ,:id => @collection_date.id)
     else
-      flash[:notice] = 'Fields with * cannot be empty'
+      flash[:notice] = 'Os campos com * não pode ser vazio'
       redirect_to :action => "additional_fees_create_form"
     end
   end
@@ -747,7 +747,7 @@ class FinanceController < ApplicationController
     fee_category = FinanceFeeCategory.find(params[:finance_fee_collection][:fee_category_id])
     batchs =[]
     batchs = params[:fee_collection][:batch_ids]
-    subject = "Fees submission date"
+    subject = "Data de apresentação das taxas"
        
     batchs.each do |b|
       @finance_fee_collection = FinanceFeeCollection.new(
@@ -799,7 +799,7 @@ class FinanceController < ApplicationController
   
   def fee_collection_update
     @finance_fee_collection = FinanceFeeCollection.find params[:id]
-    flash[:notice]="Fee Collection updated successfully" if @finance_fee_collection.update_attributes(params[:fee_collection]) if request.post?
+    flash[:notice]="Taxa de coleta atualizada com sucesso" if @finance_fee_collection.update_attributes(params[:fee_collection]) if request.post?
     @finance_fee_collections = FinanceFeeCollection.all(:conditions => ["is_deleted = '#{false}' and batch_id = '#{@finance_fee_collection.batch_id}'"])
   end
 
@@ -1004,7 +1004,7 @@ class FinanceController < ApplicationController
       transaction.save
       @financefee.update_attribute(:transaction_id, transaction.id)
     end
-    flash[:notice] = 'Fees Paid'
+    flash[:notice] = 'Taxas Pagas'
     redirect_to  :action => "fees_student_search"
   end
 
@@ -1104,7 +1104,7 @@ class FinanceController < ApplicationController
       transaction.save
       @financefee.update_attribute(:transaction_id, transaction.id)
 
-      flash[:notice] = "Fees Paid"
+      flash[:notice] = "Taxas Pagas"
       redirect_to  :action => "fees_defaulters"
     
     end
@@ -1238,7 +1238,7 @@ class FinanceController < ApplicationController
     bargraph.width = 1;
     bargraph.colour = '#bb0000';
     bargraph.dot_size = 3;
-    bargraph.text = "Amount"
+    bargraph.text = "Quantidade"
     bargraph.values = data
 
     x_axis = XAxis.new
@@ -1247,12 +1247,12 @@ class FinanceController < ApplicationController
     y_axis = YAxis.new
     y_axis.set_range(largest_value-(largest_value*2),largest_value,largest_value/5)
 
-    title = Title.new("Finance Transaction")
+    title = Title.new("Transação Financeira")
 
-    x_legend = XLegend.new("Examination name")
+    x_legend = XLegend.new("Nome do exame")
     x_legend.set_style('{font-size: 14px; color: #778877}')
 
-    y_legend = YLegend.new("Marks")
+    y_legend = YLegend.new("Marcas")
     y_legend.set_style('{font-size: 14px; color: #770077}')
 
     chart = OpenFlashChart.new
@@ -1347,13 +1347,13 @@ class FinanceController < ApplicationController
     bargraph.width = 1;
     bargraph.colour = '#bb0000';
     bargraph.dot_size = 3;
-    bargraph.text = "For the period #{start_date}-#{end_date}"
+    bargraph.text = "Para o período #{start_date}-#{end_date}"
     bargraph.values = data
     bargraph2 = BarFilled.new()
     bargraph2.width = 1;
     bargraph2.colour = '#000000';
     bargraph2.dot_size = 3;
-    bargraph2.text = "For the period #{start_date2}-#{end_date2}"
+    bargraph2.text = "Para o período #{start_date2}-#{end_date2}"
     bargraph2.values = data2
 
     x_axis = XAxis.new
@@ -1362,12 +1362,12 @@ class FinanceController < ApplicationController
     y_axis = YAxis.new
     y_axis.set_range(largest_value-(largest_value*2),largest_value,largest_value/5)
 
-    title = Title.new("Finance Transaction")
+    title = Title.new("Transação Financeira")
 
-    x_legend = XLegend.new("Examination name")
+    x_legend = XLegend.new("Nome do exame")
     x_legend.set_style('{font-size: 14px; color: #778877}')
 
-    y_legend = YLegend.new("Marks")
+    y_legend = YLegend.new("Marcas")
     y_legend.set_style('{font-size: 14px; color: #770077}')
 
     chart = OpenFlashChart.new
@@ -1441,7 +1441,7 @@ class FinanceController < ApplicationController
     bargraph.width = 1;
     bargraph.colour = '#bb0000';
     bargraph.dot_size = 3;
-    bargraph.text = "Amount"
+    bargraph.text = "Quantidade"
     bargraph.values = data
 
     x_axis = XAxis.new
@@ -1450,12 +1450,12 @@ class FinanceController < ApplicationController
     y_axis = YAxis.new
     y_axis.set_range(largest_value-(largest_value*2),largest_value,largest_value/5)
 
-    title = Title.new("Finance Transaction")
+    title = Title.new("Transação Financeira")
 
-    x_legend = XLegend.new("Examination name")
+    x_legend = XLegend.new("Nome do exame")
     x_legend.set_style('{font-size: 14px; color: #778877}')
 
-    y_legend = YLegend.new("Marks")
+    y_legend = YLegend.new("Marcas")
     y_legend.set_style('{font-size: 14px; color: #770077}')
 
     chart = OpenFlashChart.new
